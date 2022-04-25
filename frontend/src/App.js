@@ -83,12 +83,19 @@ function Content() {
         super(props);
         this.state={brand:"ford"}
     }
-        render(){
-        return(<div>
-                <h1> i am {this.state.brand} car</h1>
-            </div>
 
-        )
+    changeBrand = () =>{
+        this.setState({brand: "tot"})
+    }
+    render(){return(
+        <div>
+            <h1> i am {this.state.brand} car</h1>
+             <button type="button"
+                     onClick={this.changeBrand}> Change Brand
+             </button>
+
+        </div>
+    )
     }
 }
 export default function Test() {
